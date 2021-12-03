@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function ans(){
+            click_val = document.querySelector('input[name=op]:checked').value;
+            document.querySelector("#selected").value(click_val);
+        }
+    </script>
+    <div class="container">
+        <form action="{% url 'submit' %}">
+            <h1>Q1 : What are the colors in the Indian national flag? Select all:</h1>
+            <input type="checkbox" name="op[]" value="White">
+            White <br>
+            <input type="checkbox" name="op[]" value="Yellow">
+            Yellow <br>
+            <input type="checkbox" name="op[]" value="Orange">
+            Orange <br>
+            <input type="checkbox" name="op[]" value="Green">
+            Green <br>
+            <input type="submit" value="click">
+        </form>
+    </div>
+</body>
+</html>

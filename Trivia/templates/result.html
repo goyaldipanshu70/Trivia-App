@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+</head>
+<body>
+    <div class="container jumbotron">
+        {% for o in ob %}
+        Game {{ forloop.counter }} : {{o.date}}
+        <h1>Name : {{o.username}}</h1>
+        <br><br>
+        <h1>Q1 : Who is the best cricketer in the world?</h1>
+        <h1>Selected option is {{o.ans1}} </h1>
+        <br><br>
+        <h1>Q1 : What are the colors in the Indian national flag? Select all:</h1>
+        <h1>Selected option is {{o.ans2}} </h1>
+        {% endfor %}
+    </div>
+    <a href="{% url 'home' %}"></a>
+</body>
+</html>

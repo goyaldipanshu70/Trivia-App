@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia App</title>
+</head>
+<body>
+    <div class="container">
+        <form action="{% url 'ques2' %}">
+            <h1>Q1 : Who is the best cricketer in the world?</h1>
+            <input type="radio" name="op" value="Sachin Tendulkar">
+            A. Sachin Tendulkar <br>
+            <input type="radio" name="op" value="Virat Kolli">
+            B. Virat Kolli <br>
+            <input type="radio" name="op" value="Adam Gilchirst">
+            C. Adam Gilchirst <br>
+            <input type="radio" name="op" value="Jacques Kallis">
+            D. Jacques Kallis <br>
+            <input type="submit" value="click">
+        </form>
+    </div>
+</body>
+</html>
